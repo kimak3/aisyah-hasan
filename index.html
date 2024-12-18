@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8E1F4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #D6A7F7;
+            color: white;
+            padding: 1.5rem;
+        }
+
+        nav {
+            background: #4B4B4B;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #D6A7F7;
+        }
+
+        main {
+            padding: 2rem;
+            background: white;
+            margin: 2rem auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #D6A7F7;
+            padding: 1rem 0;
+        }
+
+        footer h3 {
+            margin: 0;
+            color: white;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
+            max-width: 400px;
+        }
+
+        .about-img {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem auto;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 1rem auto;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background: #D6A7F7;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4B4B4B;
+        }
+
+        /* CSS to shrink the images in the portfolio */
+        .portfolio img {
+            width: 200px; /* Setting the width of images */
+            height: auto; /* Maintain the aspect ratio */
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Page</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('biodata')">My Biodata</a>
+        <a href="#" onclick="showPage('portfolio')">My Portfolio</a>
+        <a href="#" onclick="showPage('video')">My Video</a>
+        <a href="#" onclick="showPage('comments')">Your Comments</a>
+    </nav>
+
+    <main id="content">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <script>
+        const pages = {
+            home: `
+                <h2>Welcome to My Personal Page</h2>
+                <div class="about-section">
+                    <div class="about-text">
+                        <p>Hello! My name is Nurul Aisyah Binti Hasan Basri. Welcome to my personal webpage!  
+                        I’m happy to share a bit about myself here. This website is a place where I can show you my biodata, my work, and things I enjoy doing.  
+                        I’ve included some of my projects, a video, and even a section where you can leave your comments. Feel free to look around and learn more about me. Thank you for stopping by, and I hope you enjoy your visit!
+                        </p>
+                    </div>
+                    <div class="about-img">
+                        <img src="your-photo.jpg.jpg" alt="My Picture">
+                    </div>
+                </div>
+                <footer>
+                    <h3>Contact Me</h3>
+                    <ul>
+                        <li><a href="https://www.tiktok.com/@ehekkkk__" target="_blank">TikTok</a></li>
+                        <li><a href="https://www.instagram.com/nrl.aisyahhhhh" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/Aisyah Hasan" target="_blank">Facebook</a></li>
+                    </ul>
+                </footer>
+            `,
+            biodata: `
+                <h2>My Biodata</h2>
+                <p><strong>Name:</strong> Nurul Aisyah Binti Hasan Basri</p>
+                <p><strong>Age:</strong> 22 Years old</p>
+                <p><strong>Hobbies:</strong> Go to the gym and jogging</p>
+                <p><strong>Email:</strong> nurulaisyah.hasanbasri@example.com</p>
+                
+                <h3>My Timetable</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Activity</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Class</td>
+                            <td>8:00 AM - 1:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Class</td>
+                            <td>8:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Class</td>
+                            <td>8:00 AM - 4:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Go to the gym</td>
+                            <td>2:00 PM - 3:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Go to the gym</td>
+                            <td>2:00 PM - 3:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Self-study</td>
+                            <td>All day</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Go to the gym</td>
+                            <td>2:00 PM - 3:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+            portfolio: `
+                <h2>My Portfolio</h2>
+                <div>
+                    <img src="portfolio1.jpg" alt="Project 1">
+                    <p>Project 1: This is a project I made when I took the subject of animation last semester. this is a bedroom that has a bed, a small desk, a trash can and more. This is a basic bedroom. I made this bedroom using blender software.</p>
+                </div>
+                <div>
+                    <img src="portfolio2.jpg" alt="Project 2">
+                    <p>Project 2: This is a model I created using blender software. I chose to make this duck model because it looks cute and is easy to do.</p>
+                </div>
+            `,
+            video: `
+                <h2>My Video</h2>
+                <video width="300" height="500" controls>
+                    <source src="my-video.mp4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `,
+            comments: `
+                <h2>Your Comments</h2>
+                <form>
+                    <textarea placeholder="Write your comment here..."></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            `
+        };
+
+        function showPage(page) {
+            document.getElementById('content').innerHTML = pages[page];
+        }
+
+        // Default to Home page on load
+        window.onload = () => showPage('home');
+    </script>
+</body>
+</html>
